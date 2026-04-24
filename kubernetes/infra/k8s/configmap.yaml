@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: studyflow-config
+  namespace: studyflow
+data:
+  POSTGRES_DB: studyflow
+  POSTGRES_HOST: postgres-service
+  POSTGRES_PORT: "5432"
+  DATABASE_URL: postgresql+psycopg://studyflow:studyflow@postgres-service:5432/studyflow
+  REDIS_HOST: redis-service
+  REDIS_PORT: "6379"
+  REDIS_QUEUE: studyflow:plans
+  APP_ENV: kubernetes
+  API_UPSTREAM: http://api-service:8000
