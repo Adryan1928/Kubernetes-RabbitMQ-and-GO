@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+type myType int
+
 var z int = 5
 
 func main() {
@@ -17,7 +19,7 @@ func main() {
 
 	fmt.Printf("X: %v, %T \n", x, x)
 
-	z, x = swap(x, z)
+	x, z = swap(x, z)
 
 	fmt.Printf("X: %v, %T \n", x, x)
 	fmt.Printf("Z: %v, %T \n", z, z)
